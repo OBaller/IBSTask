@@ -14,6 +14,9 @@
 		C523C15228E70D8D00A41EC3 /* IBSTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523C15128E70D8D00A41EC3 /* IBSTaskTests.swift */; };
 		C523C15C28E70D8D00A41EC3 /* IBSTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523C15B28E70D8D00A41EC3 /* IBSTaskUITests.swift */; };
 		C523C15E28E70D8D00A41EC3 /* IBSTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523C15D28E70D8D00A41EC3 /* IBSTaskUITestsLaunchTests.swift */; };
+		C523C16B28E71CDE00A41EC3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523C16A28E71CDE00A41EC3 /* LoginView.swift */; };
+		C523C16D28E98C9300A41EC3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523C16C28E98C9300A41EC3 /* LoginViewModel.swift */; };
+		C523C16F28EAFB0F00A41EC3 /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523C16E28EAFB0F00A41EC3 /* ShakeEffect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		C523C15728E70D8D00A41EC3 /* IBSTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBSTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C523C15B28E70D8D00A41EC3 /* IBSTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBSTaskUITests.swift; sourceTree = "<group>"; };
 		C523C15D28E70D8D00A41EC3 /* IBSTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBSTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C523C16A28E71CDE00A41EC3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C523C16C28E98C9300A41EC3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C523C16E28EAFB0F00A41EC3 /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 			children = (
 				C523C14028E70D8900A41EC3 /* IBSTaskApp.swift */,
 				C523C14228E70D8900A41EC3 /* ContentView.swift */,
+				C523C16A28E71CDE00A41EC3 /* LoginView.swift */,
+				C523C16C28E98C9300A41EC3 /* LoginViewModel.swift */,
+				C523C16E28EAFB0F00A41EC3 /* ShakeEffect.swift */,
 				C523C14428E70D8C00A41EC3 /* Assets.xcassets */,
 				C523C14628E70D8C00A41EC3 /* Preview Content */,
 			);
@@ -257,7 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C523C16D28E98C9300A41EC3 /* LoginViewModel.swift in Sources */,
+				C523C16B28E71CDE00A41EC3 /* LoginView.swift in Sources */,
 				C523C14328E70D8900A41EC3 /* ContentView.swift in Sources */,
+				C523C16F28EAFB0F00A41EC3 /* ShakeEffect.swift in Sources */,
 				C523C14128E70D8900A41EC3 /* IBSTaskApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
