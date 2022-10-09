@@ -9,7 +9,9 @@ import Foundation
 import Combine
 
 class UserViewModel: ObservableObject {
+//    @Published var users: [UserDetails] = []
     @Published var users: UserDetails?
+
 
     private var cancellable: AnyCancellable?
     

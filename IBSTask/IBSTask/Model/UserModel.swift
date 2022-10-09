@@ -7,23 +7,35 @@
 
 import Foundation
 
+
+// MARK: User
 struct User: Codable {
     let results: [UserDetails]
     let info: Info
 }
 
 // MARK: - Result
-struct UserDetails: Codable {
-    let gender: String
+struct UserDetails: Codable, Identifiable {
+    var id = UUID()
+//    let gender: String
     let name: Name
     let location: Location
     let email: String
-    let login: Login
-    let dob, registered: Dob
-    let phone, cell: String
-    let id: ID
+//    let login: Login
+//    let dob, registered: Dob
+//    let phone, cell: String
+    let apiID: ID?
     let picture: Picture
-    let nat: String
+//    let nat: String
+    
+    enum CodingKeys: String, CodingKey {
+        case apiID = "id"
+        case name
+        case location
+        case email
+        case picture
+        
+    }
 }
 
 
@@ -51,9 +63,9 @@ struct ID: Codable {
 struct Location: Codable {
     let street: Street
     let city, state, country: String
-    let postcode: Int
-    let coordinates: Coordinates
-    let timezone: Timezone
+//    let postcode: String?
+//    let coordinates: Coordinates
+//    let timezone: Timezone
 }
 
 // MARK: - Coordinates
@@ -90,5 +102,12 @@ struct Name: Codable {
 
 // MARK: - Picture
 struct Picture: Codable {
-    let large, medium, thumbnail: String
+    let large, medium: String
+}
+
+extension UserDetails {
+    static func mock() -> UserDetails {
+        UserDetails(name: Name(title: "Mr", first: "Nas", last: "Oye"), location: Location(street: Street(number: 4938, name: "Docfastraat"), city: "Velswijk", state: "Overijssel", country: "Netherlands"), email: "nas@g", apiID: nil, picture: Picture(large: "https://randomuser.me/api/portraits/men/47.jpg", medium: "https://randomuser.me/api/portraits/med/men/47.jpg"))
+        
+    }
 }
