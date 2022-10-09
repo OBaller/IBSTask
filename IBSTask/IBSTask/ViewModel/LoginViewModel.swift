@@ -9,13 +9,9 @@ import Foundation
 import Combine
 import SwiftUI
 
-import Foundation
-import Combine
-import SwiftUI
-
 struct LoginViewModel {
-    var email         = ""
-    var password      = ""
+    var email = ""
+    var password = ""
     var emailErrorBorderColor: Color = Color(.secondarySystemBackground)
     var passwordErrorBorderColor: Color = Color(.secondarySystemBackground)
     var emailError: LoginError?

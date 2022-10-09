@@ -14,9 +14,7 @@ struct HomeView: View {
         List {
             
         }
-        .onAppear {
-            userViewModel.getUsers()
-        }
+        
     }
 }
 

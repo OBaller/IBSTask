@@ -18,14 +18,14 @@ struct User: Codable {
 struct UserDetails: Codable, Identifiable {
     var id = UUID()
 //    let gender: String
-    let name: Name
-    let location: Location
-    let email: String
+    let name: Name?
+    let location: Location?
+    let email: String?
 //    let login: Login
 //    let dob, registered: Dob
 //    let phone, cell: String
     let apiID: ID?
-    let picture: Picture
+    let picture: Picture?
 //    let nat: String
     
     enum CodingKeys: String, CodingKey {
