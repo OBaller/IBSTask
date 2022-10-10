@@ -9,24 +9,19 @@ import Foundation
 
 
 // MARK: User
-struct User: Codable {
+struct User: Decodable {
     let results: [UserDetails]
     let info: Info
 }
 
 // MARK: - Result
-struct UserDetails: Codable, Identifiable {
+struct UserDetails: Decodable, Identifiable {
     var id = UUID()
-//    let gender: String
+    let apiID: ID?
     let name: Name?
     let location: Location?
     let email: String?
-//    let login: Login
-//    let dob, registered: Dob
-//    let phone, cell: String
-    let apiID: ID?
     let picture: Picture?
-//    let nat: String
     
     enum CodingKeys: String, CodingKey {
         case apiID = "id"
@@ -34,7 +29,6 @@ struct UserDetails: Codable, Identifiable {
         case location
         case email
         case picture
-        
     }
 }
 
@@ -55,8 +49,9 @@ struct Dob: Codable {
 }
 
 // MARK: - ID
-struct ID: Codable {
-    let name, value: String
+struct ID: Decodable {
+    let name: String?
+    let value: String?
 }
 
 // MARK: - Location
@@ -101,13 +96,15 @@ struct Name: Codable {
 }
 
 // MARK: - Picture
-struct Picture: Codable {
-    let large, medium: String
+struct Picture: Decodable {
+    let large: String
+    let medium: String?
+    
 }
 
 extension UserDetails {
     static func mock() -> UserDetails {
-        UserDetails(name: Name(title: "Mr", first: "Nas", last: "Oye"), location: Location(street: Street(number: 4938, name: "Docfastraat"), city: "Velswijk", state: "Overijssel", country: "Netherlands"), email: "nas@g", apiID: nil, picture: Picture(large: "https://randomuser.me/api/portraits/men/47.jpg", medium: "https://randomuser.me/api/portraits/med/men/47.jpg"))
+        UserDetails(apiID: nil, name: Name(title: "Mr", first: "Nas", last: "Oye"), location: Location(street: Street(number: 4938, name: "Docfastraat"), city: "Velswijk", state: "Overijssel", country: "Netherlands"), email: "nas@g", picture: Picture(large: "https://randomuser.me/api/portraits/men/47.jpg", medium: "https://randomuser.me/api/portraits/med/men/47.jpg"))
         
     }
 }

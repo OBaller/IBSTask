@@ -9,12 +9,12 @@ import Foundation
 import Combine
 
 class UserViewModel: ObservableObject {
-    @Published var personDataObjectList: [UserDetails] = []
+    @Published var userData: [UserDetails] = []
     @Published var searchResults: [UserDetails] = []
     @Published var apiError: ApiError? = nil
     @Published var isLoading: Bool = false
     @Published var searchTerm = ""
-    var tempPersonDataStore: [UserDetails] = []
+    var tempUsers: [UserDetails] = []
 
     init() {
         self.isLoading = true
@@ -25,7 +25,7 @@ class UserViewModel: ObservableObject {
     }
 
     func stopActivityIndicatorLoading() {
-        if self.personDataObjectList.count == 3 {
+        if self.userData.count == 3 {
             self.isLoading = false
         }
     }
@@ -36,9 +36,9 @@ class UserViewModel: ObservableObject {
         apiService.getJSON(urlString: "https://randomuser.me/api", completion: { (result: Result<User, APIService.APIError>) in
             switch result {
                 
-            case .success(let person):
+            case .success(let users):
                 DispatchQueue.main.async {
-                    self.personDataObjectList.append(contentsOf: person.results)
+                    self.userData.append(contentsOf: users.results)
                     self.stopActivityIndicatorLoading()
                 }
             case .failure(let apiError):
@@ -56,9 +56,9 @@ class UserViewModel: ObservableObject {
     func filterPersonDataList() {
         $searchTerm
             .map { searchTerm in
-                self.personDataObjectList.filter({ person in
+                self.userData.filter({ users in
                     let fullName =
-                    (person.name?.first.lowercased() ?? "") + (person.name?.last.lowercased() ?? "")
+                    (users.name?.first.lowercased() ?? "") + (users.name?.last.lowercased() ?? "")
                     return fullName.contains(searchTerm.lowercased())
 
                 })
