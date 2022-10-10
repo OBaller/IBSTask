@@ -15,21 +15,21 @@ class UserViewModel: ObservableObject {
 
     private var cancellable: AnyCancellable?
     
-    func getUsers() {
-        cancellable = APIService.shared.getUsers()
-            .receive(on: DispatchQueue.main)
-            .sink { completion in
-                switch completion {
-                case .failure(let error):
-//                    self.isRequestFailed = true
-                    print(error)
-                case .finished:
-                    print("finished loading")
-                }
-            } receiveValue: { users in
-                print(users)
-                self.users = users
-            }
-    }
+//    func getUsers() {
+////        cancellable = APIService.shared.getUsers()
+//            .receive(on: DispatchQueue.main)
+//            .sink { completion in
+//                switch completion {
+//                case .failure(let error):
+////                    self.isRequestFailed = true
+//                    print(error)
+//                case .finished:
+//                    print("finished loading")
+//                }
+//            } receiveValue: { users in
+//                print(users)
+//                self.users = users
+//            }
+//    }
     
 }
