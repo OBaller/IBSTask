@@ -29,6 +29,7 @@
 		C575BD4528F2C96D00C5B822 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C575BD4428F2C96D00C5B822 /* ApiError.swift */; };
 		C575BD4728F2CC0800C5B822 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C575BD4628F2CC0800C5B822 /* MockService.swift */; };
 		C575BD4A28F4074A00C5B822 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C575BD4928F4074A00C5B822 /* SDWebImageSwiftUI */; };
+		C575BD5428F4580500C5B822 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C575BD5328F4580500C5B822 /* ListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		C575BD4228F2C79A00C5B822 /* TextFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModel.swift; sourceTree = "<group>"; };
 		C575BD4428F2C96D00C5B822 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		C575BD4628F2CC0800C5B822 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		C575BD5328F4580500C5B822 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				C523C14228E70D8900A41EC3 /* ContentView.swift */,
 				C575BCE628EC25B600C5B822 /* HomeView.swift */,
+				C575BD5328F4580500C5B822 /* ListCell.swift */,
 				C523C16A28E71CDE00A41EC3 /* LoginView.swift */,
 			);
 			path = Views;
@@ -374,6 +377,7 @@
 				C575BD3928F2A99E00C5B822 /* EntryField.swift in Sources */,
 				C575BD4528F2C96D00C5B822 /* ApiError.swift in Sources */,
 				C575BCE728EC25B600C5B822 /* HomeView.swift in Sources */,
+				C575BD5428F4580500C5B822 /* ListCell.swift in Sources */,
 				C523C16F28EAFB0F00A41EC3 /* ShakeEffect.swift in Sources */,
 				C575BCF128EDA20100C5B822 /* UserViewModel.swift in Sources */,
 				C523C14128E70D8900A41EC3 /* IBSTaskApp.swift in Sources */,
