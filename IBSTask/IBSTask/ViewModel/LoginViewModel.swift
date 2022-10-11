@@ -9,22 +9,24 @@ import Foundation
 import Combine
 import SwiftUI
 
-struct LoginViewModel {
-    var email = ""
-    var password = ""
-    var emailErrorBorderColor: Color = Color(.secondarySystemBackground)
-    var passwordErrorBorderColor: Color = Color(.secondarySystemBackground)
-    var emailError: LoginError?
-    var passwordError: LoginError?
+class LoginViewModel: ObservableObject {
+    @Published var email = ""
+    @Published var password      = ""
+    @Published var emailErrorBorderColor: Color = Color(.secondarySystemBackground)
+    @Published var passwordErrorBorderColor: Color = Color(.secondarySystemBackground)
+    @Published var emailError: LoginError?
+    @Published var passwordError: LoginError?
+    @Published var isAuthenticated: Bool = false
+
     
-    mutating func clearErrors() {
+    func clearErrors() {
         emailError = nil
         passwordError = nil
         emailErrorBorderColor = Color(.secondarySystemBackground)
         passwordErrorBorderColor = Color(.secondarySystemBackground)
     }
     
-    mutating func isValid() -> Bool {
+    func isValid() -> Bool {
         clearErrors()
         
         if email.isEmpty {
