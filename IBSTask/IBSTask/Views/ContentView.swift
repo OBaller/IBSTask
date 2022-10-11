@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @StateObject var authentication = LoginViewModel()
     var body: some View {
-        VStack {
-            
+        if self.authentication.isAuthenticated {
+            HomeView()
+        } else {
+            LoginView(loginVM: self.authentication)
         }
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
