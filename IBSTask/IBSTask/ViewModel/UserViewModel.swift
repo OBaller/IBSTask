@@ -14,14 +14,13 @@ class UserViewModel: ObservableObject {
     @Published var apiError: ApiError? = nil
     @Published var isLoading: Bool = false
     @Published var searchTerm = ""
-    var tempUsers: [UserDetails] = []
 
     init() {
         self.isLoading = true
         for _ in (0 ... 2) {
-            getPersonData()
+            getUserData()
         }
-        filterPersonDataList()
+        filteredUsers()
     }
 
     func stopActivityIndicatorLoading() {
@@ -30,7 +29,7 @@ class UserViewModel: ObservableObject {
         }
     }
     
-    func getPersonData() {
+    func getUserData() {
         let apiService: APIService = APIService.shared
        
         apiService.getJSON(urlString: "https://randomuser.me/api", completion: { (result: Result<User, APIService.APIError>) in
@@ -53,12 +52,12 @@ class UserViewModel: ObservableObject {
         })
     }
     
-    func filterPersonDataList() {
+    func filteredUsers() {
         $searchTerm
             .map { searchTerm in
                 self.userData.filter({ users in
                     let fullName =
-                    (users.name?.first.lowercased() ?? "") + (users.name?.last.lowercased() ?? "")
+                    (users.name?.first?.lowercased() ?? "") + (users.name?.last?.lowercased() ?? "")
                     return fullName.contains(searchTerm.lowercased())
 
                 })
