@@ -23,10 +23,8 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                List {
-                    ForEach(listData, id: \.id) { users in
-                        ListCell(user: users)
-                    }
+                List(listData) { users in
+                    ListCell(user: users)
                 }
                 .listStyle(PlainListStyle())
                 .alert(item: $userViewModel.apiError) { appAlert in
@@ -36,21 +34,6 @@ struct HomeView: View {
                                 """))
                 }
                 .searchable(text: $userViewModel.searchTerm, placement: .navigationBarDrawer(displayMode: .always))
-                
-//                VStack {
-//                    List(listData) { users in
-//                        ListCell(user: users)
-//                    }
-//                    .listStyle(PlainListStyle())
-//                    .animation(.default, value: userViewModel.searchTerm)
-//                }
-//                .alert(item: $userViewModel.apiError) { appAlert in
-//                    Alert(title: Text("Error"), message: Text("""
-//                                \(appAlert.errorString)
-//                                Please try again later!
-//                                """))
-//                }
-//                .searchable(text: $userViewModel.searchTerm, placement: .navigationBarDrawer(displayMode: .always))
                 
                 if userViewModel.isLoading {
                     ZStack {
