@@ -30,6 +30,7 @@
 		C575BD4728F2CC0800C5B822 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C575BD4628F2CC0800C5B822 /* MockService.swift */; };
 		C575BD4A28F4074A00C5B822 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C575BD4928F4074A00C5B822 /* SDWebImageSwiftUI */; };
 		C575BD5428F4580500C5B822 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C575BD5328F4580500C5B822 /* ListCell.swift */; };
+		C575BD5A28F6AE6500C5B822 /* UserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C575BD5928F6AE6500C5B822 /* UserDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		C575BD4428F2C96D00C5B822 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		C575BD4628F2CC0800C5B822 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		C575BD5328F4580500C5B822 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		C575BD5928F6AE6500C5B822 /* UserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +136,6 @@
 				C575BCEA28EDA0C100C5B822 /* NetworkService */,
 				C523C14028E70D8900A41EC3 /* IBSTaskApp.swift */,
 				C575BCEB28EDA0DD00C5B822 /* Views */,
-				C523C16E28EAFB0F00A41EC3 /* ShakeEffect.swift */,
 				C523C14428E70D8C00A41EC3 /* Assets.xcassets */,
 				C523C14628E70D8C00A41EC3 /* Preview Content */,
 			);
@@ -180,6 +181,7 @@
 			children = (
 				C523C14228E70D8900A41EC3 /* ContentView.swift */,
 				C575BCE628EC25B600C5B822 /* HomeView.swift */,
+				C575BD5928F6AE6500C5B822 /* UserDataView.swift */,
 				C575BD5328F4580500C5B822 /* ListCell.swift */,
 				C523C16A28E71CDE00A41EC3 /* LoginView.swift */,
 			);
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				C575BD3828F2A99E00C5B822 /* EntryField.swift */,
+				C523C16E28EAFB0F00A41EC3 /* ShakeEffect.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				C575BD3928F2A99E00C5B822 /* EntryField.swift in Sources */,
 				C575BD4528F2C96D00C5B822 /* ApiError.swift in Sources */,
 				C575BCE728EC25B600C5B822 /* HomeView.swift in Sources */,
+				C575BD5A28F6AE6500C5B822 /* UserDataView.swift in Sources */,
 				C575BD5428F4580500C5B822 /* ListCell.swift in Sources */,
 				C523C16F28EAFB0F00A41EC3 /* ShakeEffect.swift in Sources */,
 				C575BCF128EDA20100C5B822 /* UserViewModel.swift in Sources */,
