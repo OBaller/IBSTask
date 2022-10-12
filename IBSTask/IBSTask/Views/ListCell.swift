@@ -35,8 +35,14 @@ struct ListCell: View {
             
             VStack(alignment: .leading, spacing: 10) {
                 Text("\(user.name?.first ?? "") \(user.name?.last ?? "")")
+                    .foregroundColor(.accentColor)
+                    .font(.headline)
                 Text(user.email ?? "")
+                    .foregroundColor(.secondary)
+                    .font(.subheadline)
                 Text(address())
+                    .font(.footnote)
+                    .fontWeight(.bold)
                 
             }
             .padding(.horizontal)
