@@ -92,19 +92,19 @@ struct Login: Codable {
 
 // MARK: - Name
 struct Name: Codable {
-    let title, first, last: String
+    let title, first, last: String?
 }
 
 // MARK: - Picture
 struct Picture: Decodable {
-    let large: String
+    let large: String?
     let medium: String?
     
 }
 
 extension UserDetails {
     static func mock() -> UserDetails {
-        UserDetails(apiID: nil, name: Name(title: "Mr", first: "Nas", last: "Oye"), location: Location(street: Street(number: 4938, name: "Docfastraat"), city: "Velswijk", state: "Overijssel", country: "Netherlands"), email: "nas@g", picture: Picture(large: "https://randomuser.me/api/portraits/men/47.jpg", medium: "https://randomuser.me/api/portraits/med/men/47.jpg"))
+        UserDetails(apiID: nil, name: Name(title: "Mr", first: "Nas", last: "Oye"), location: Location(street: Street(number: 4938, name: "Docfastraat"), city: "Velswijk", state: "Overijssel", country: "Netherlands"), email: "nas@gmail.com", picture: Picture(large: "https://randomuser.me/api/portraits/men/47.jpg", medium: "https://randomuser.me/api/portraits/med/men/47.jpg"))
         
     }
 }
